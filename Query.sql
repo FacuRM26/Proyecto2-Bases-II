@@ -48,7 +48,6 @@ CREATE DATABASE "Proyecto"
         specimen_cost float not null 
     );
 
-
 create table temp(
     specimen_id int,
     taxon_id int,
@@ -60,16 +59,16 @@ create table temp(
     family_name varchar(50),
     genus_name varchar(50),
     species_name varchar(50),
-    scientific_name varchar(50),
+    scientific_name varchar(200),
     gathering_responsible varchar(50),
     site_id int,
     latitude float,
     longitude float,
-    site_description varchar(50),
-    specimen_description varchar(50),
+    site_description varchar(10000),
+    specimen_description varchar(10000),
     specimen_cost float
-
 );
 
 --recibir datos de la tabla specimen de un csv
-copy temp from 'C:\Users\Usuario\Documents\Proyecto\specimen.csv' DELIMITER ',' CSV HEADER;
+
+
